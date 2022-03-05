@@ -24,7 +24,7 @@ public class Car {
     }
 
 
-    public String getInfoCar(){
-    return "Model: " + model + ", Rudder: " + rudder + ", Volume: " + volume;
+    public String getInfoCar() {
+        return "Model: " + model + ", Rudder: " + rudder + ", Volume: " + volume;
     }
 }

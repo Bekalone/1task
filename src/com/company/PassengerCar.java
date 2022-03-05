@@ -5,7 +5,7 @@ import com.company.Car;
 import java.util.Random;
 
 public class PassengerCar extends Car {
-    private String autoPilot = generateAutoPilot();
+    private String autoPilot = generateAutoPilot("Alisa");
     private int capacity;
 
     public PassengerCar(String model, Rudder rudder, double volume, int capacity) {
@@ -29,6 +29,17 @@ public class PassengerCar extends Car {
         } else {
             return "ваша машина не имеет функцию автопилот!";
         }
+    }
+
+    public String generateAutoPilot(String nameAssistant){
+        Random random = new Random();
+        boolean autopilots = random.nextBoolean();
+        if (autopilots == true){
+            return "у вашей машины есть функция автопилот c ассистентом " + nameAssistant;
+        } else {
+            return "ваша машина не имеет функцию автопилот но с ассистентом " + nameAssistant;
+        }
+
     }
 
     @Override
